@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import json
 import string
+import os
 
 def actionTypeId(typeId) :
   return '  @Override\n  public int getActionTypeId() {\n    return %d;\n  }' % (typeId)
@@ -103,6 +104,7 @@ for data in datas :
     setterDatas.append(setterCreator(key, type))
 
   classData = classBaseCreator(typeId, objectType, name, restrictionDatas, setterDatas)
-  f = open('%sAction.java'%(name),'w+')
+  home = os.environ['HOME']
+  f = open('%s/Desktop/%sAction.java'%(home, name),'w+')
   f.write(classData)
   f.close()
