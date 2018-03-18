@@ -4,20 +4,6 @@ import json
 import string
 import os
 
-def actionTypeId(typeId) :
-  return '  @Override\n  public int getActionTypeId() {\n    return %d;\n  }' % (typeId)
-
-def actionClassCreator(typeId,name,fieldDatas,setterDatas) :
-  field = ''
-  setter = ''
-  for fieldData in fieldDatas :
-    field += fieldData
-  for setterData in setterDatas :
-    setter += setterData
-  actionTypeIdGetter = actionTypeId(typeId)
-  return 'public class %sAction extends Action {\n  private static final Restriction [] restriction;\n  static {\n    restriction = {\n%s\n    }\n  }\n%s\n%s}\n' % (name, restriction, actionTypeIdGetter, setter)
-
-
 def createClass(className,fieldDatas,setterDatas) :
   field = ''
   setter = ''
