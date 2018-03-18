@@ -1,0 +1,46 @@
+[{
+  "className":"Sample1",
+  "stringProperties":[
+    {
+      "key":"version",
+      "type":"String"
+    },
+    {
+      "key":"appName",
+      "type":"String"
+    }
+  ],
+  "numberProperties":[
+    {
+      "key":"time",
+      "type":"Long"
+    },
+    {
+      "key":"year",
+      "type":"Integer"
+    }
+  ]
+},
+{
+  "className":"Sample2",
+  "stringProperties":[
+    {
+      "key":"version",
+      "type":"String"
+    },
+    {
+      "key":"appName",
+      "type":"String"
+    }
+  ],
+  "numberProperties":[
+    {
+      "key":"time",
+      "type":"Long"
+    },
+    {
+      "key":"year",
+      "type":"Integer"
+    }
+  ]
+}]
